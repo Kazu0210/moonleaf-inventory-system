@@ -7,7 +7,8 @@ const styles = StyleSheet.create ({
         backgroundColor: '#F5F5F5'
     },
     navBar: {
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        elevation: 5
     },
     navItems: {
         backgroundColor: '#fff',

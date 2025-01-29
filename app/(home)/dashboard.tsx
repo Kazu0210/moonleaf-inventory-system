@@ -9,11 +9,13 @@ import TotalProdCard from '../../components/totalProdCard'
 export default function Dashboard() {
     return (
         <ScrollView>
-            <View style={{ flex: 1, flexDirection: 'column', padding: 10 }}>
-                <View style={{ flex: 1, flexDirection: 'row' }} >
-                    <TotalProdCard />
+            <TouchableOpacity onPress={ () => { console.log('Total Product Card Pressed') } }>
+                <View style={{ flex: 1, flexDirection: 'column', padding: 10 }}>
+                    <View style={{ flex: 1, flexDirection: 'row' }} >
+                        <TotalProdCard />
+                    </View>
                 </View>
-            </View>
+            </TouchableOpacity> 
         </ScrollView>
     );
 }
