@@ -7,14 +7,23 @@ import { useState } from 'react';
 import styles from '../../assets/styles/home'
 
 export default function Inventory() {
+    const [InputValue, setInputValue] = useState('');
+
+    const handleSearchClicked = () => {
+        setInputValue('')
+        console.log(InputValue);
+    }
+
     return (
         <ScrollView>
             <View style={{ flex: 1, flexDirection: 'column' }}>
-                <Text>Inventory Screen</Text>
-                <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', backgroundColor: 'blue', padding: 5 }}>
-                    <TextInput placeholder="Search here" style={{ backgroundColor: '#fff', width: 250, height: 30, borderRadius: 5, fontSize: 12, padding: 0, margin: 0, textAlignVertical: 'center' }} />
-                    {/* remove margin or padding on the text input */}
-                    <TouchableOpacity style={{
+
+                <Text>Inventory</Text>
+
+                <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end', backgroundColor: 'blue', padding: 5 }}>
+                    <TextInput placeholder="Search here" value={InputValue} onChangeText={setInputValue} style={{ backgroundColor: '#fff', width: 250, height: 30, borderRadius: 5, fontSize: 12, padding: 0, paddingInlineStart: 5, margin: 0, textAlignVertical: 'center' }} />
+
+                    <TouchableOpacity onPress={handleSearchClicked} style={{
                         backgroundColor: 'red',
                         width: 70,
                         maxWidth: 70,
