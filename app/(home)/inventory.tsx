@@ -15,16 +15,16 @@ export default function Inventory() {
     }
 
     return (
-        <ScrollView>
+        <ScrollView style={{ padding:5 }}>
             <View style={{ flex: 1, flexDirection: 'column' }}>
 
                 <Text>Inventory</Text>
 
-                <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end', backgroundColor: 'blue', padding: 5 }}>
+                <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end' }}>
                     <TextInput placeholder="Search here" value={InputValue} onChangeText={setInputValue} style={{ backgroundColor: '#fff', width: 250, height: 30, borderRadius: 5, fontSize: 12, padding: 0, paddingInlineStart: 5, margin: 0, textAlignVertical: 'center' }} />
 
                     <TouchableOpacity onPress={handleSearchClicked} style={{
-                        backgroundColor: 'red',
+                        backgroundColor: 'green',
                         width: 70,
                         maxWidth: 70,
                         height: 30,
@@ -40,6 +40,13 @@ export default function Inventory() {
                             fontWeight: 'bold'
                         }} >Search</Text>
                     </TouchableOpacity>
+                </View>
+            </View>
+
+            <View style={{ backgroundColor:'green', height:'auto', flex:1, flexDirection:'column' }}>
+                <View style={{ flex:1, flexDirection:'row', justifyContent:'flex-end', alignItems:'center', backgroundColor:'orange'
+                 }}>
+                    <TouchableOpacity style={{ backgroundColor:'green', flex:1, justifyContent:'center', alignItems:'center', width: 100, maxWidth:100, height:30, borderRadius: 5, marginTop:5, marginBottom:5 }}><Text style={{ color:'#fff', fontWeight:'bold', fontSize:12 }}>Add Product</Text></TouchableOpacity>
                 </View>
             </View>
         </ScrollView>
