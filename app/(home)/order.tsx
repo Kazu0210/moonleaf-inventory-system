@@ -29,8 +29,17 @@ export default function Order() {
                         </TouchableOpacity> */}
                     </View>
 
-                    <View>
-                        <ProductCard name="Match Latte" price={10} />
+                    <View style={{ 
+                        flexDirection: 'row', 
+                        flexWrap: 'wrap', 
+                        justifyContent: 'flex-start', 
+                        width: '100%', 
+                        paddingHorizontal: 10 
+                    }}>
+                        <ProductCard name="Matcha Latte" price={10} image="https://munchingwithmariyah.com/wp-content/uploads/2020/06/IMG_0748-600x600.jpg" />
+                        <ProductCard name="Espresso" price={8} image="https://www.sharmispassions.com/wp-content/uploads/2012/07/espresso-coffee-recipe022.jpg" />
+                        <ProductCard name="Cappuccino" price={12} image="https://tchibo.us/cdn/shop/articles/cappucino_67fc402b-0505-4f02-a4a4-b648fd4d805c.jpg?v=1690985645&width=1000" />
+                        <ProductCard name="Latte" price={11} image="https://www.caffesociety.co.uk/assets/recipe-images/latte-small.jpg" />
                     </View>
 
                 </View>
